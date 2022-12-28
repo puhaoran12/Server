@@ -18,7 +18,7 @@
         </WrapPanel>
         <Grid Grid.Row="1">
             <Canvas x:Name="cvsMain">
-                <Path x:Name="path1" Data="M100,100 L300,100 400,200 500,200" Stroke="LightGreen" StrokeThickness="20" StrokeLineJoin="Round" Canvas.Left="206" Canvas.Top="98"></Path>
+                <Path x:Name="path12" Data="M100,100 L300,100 400,200 500,200" Stroke="LightGreen" StrokeThickness="20" StrokeLineJoin="Round" Canvas.Left="206" Canvas.Top="98"></Path>
             </Canvas>
         </Grid>
     </Grid>

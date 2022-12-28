@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\PuHaoRan\Desktop\get_Server\WpfApp2\obj\Debug\net5.0-windows\
+C:\Users\PuHaoRan\Desktop\get_Server\WpfApp2\obj\Release\net5.0-windows\
 WpfApp2
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 C:\Users\PuHaoRan\Desktop\get_Server\WpfApp2\App.xaml
 21940794329
 

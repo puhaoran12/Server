@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\PuHaoRan\Desktop\get_Server\WpfApp1\obj\Debug\
+C:\Users\PuHaoRan\Desktop\get_Server\WpfApp1\obj\Release\
 WpfApp1
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\PuHaoRan\Desktop\get_Server\WpfApp1\App.xaml
 71936075338
 
-131495787627
+12-1956820302
 13-1505183044
 Component\CoolingTower.xaml;Component\Pipeline.xaml;Component\Pipeline2.xaml;Component\UserControl1.xaml;Component\UserControl2.xaml;MainWindow.xaml;UserControl1.xaml;
 
