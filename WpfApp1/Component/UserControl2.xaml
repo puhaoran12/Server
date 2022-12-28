@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WpfApp1.Component.UserControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.Component"
+             mc:Ignorable="d" Height="130" Width="188">
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState Name="RunFlowState">
+                    <Storyboard RepeatBehavior="Forever">
+                        <DoubleAnimation Duration="0:0:1" From="0" To="5" 
+                                         Storyboard.TargetName="img"
+                                         Storyboard.TargetProperty="StrokeDashOffset"/>
+                    </Storyboard>
+                </VisualState>
+                <VisualState Name="StopFlowState"/>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Canvas Margin="0,0,0,320">
+            <Path x:Name="img" Stroke="DarkGray" StrokeThickness="2" Stretch="Fill" Width="190">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="40,40" IsClosed="True">
+                            <LineSegment Point="40,130"></LineSegment>
+                            <ArcSegment Point="60,150" Size="20,20" ></ArcSegment>
+                            <LineSegment Point="200,150"></LineSegment>
+                            <ArcSegment Point="220,130" Size="20,20"></ArcSegment>
+                            <LineSegment Point="220,40"></LineSegment>
+                            <ArcSegment Point="200,20" Size="20,20"></ArcSegment>
+                            <LineSegment Point="60,20"></LineSegment>
+                            <ArcSegment Point="40,40" Size="20,20"></ArcSegment>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Fill>
+                    <ImageBrush x:Name="haha" ImageSource="C:\Users\PuHaoRan\Desktop\WpfApp1\WpfApp1\img\1.png"></ImageBrush>
+                </Path.Fill>
+            </Path>
+        </Canvas>
+    </Grid>
+</UserControl>

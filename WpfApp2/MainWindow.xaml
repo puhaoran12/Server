@@ -1,0 +1,88 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Path Stroke="Black"
+              StrokeThickness="1"
+              Data="M 96 288 C 576 0,0 0,480 288" />
+
+        <Path Fill="Blue">
+            <Path.Data>
+                <EllipseGeometry x:Name="elips"
+                                 Center="90 290"
+                                 RadiusX="20"
+                                 RadiusY="12" />
+            </Path.Data>
+        </Path>
+
+        <StackPanel>
+            <Button Width=" 100"
+                    Height=" 30"
+                    x:Name="Beginbutton"
+                    Content="开始"                     
+                    Margin="258,0,259,0" />
+            <Button Width=" 100"
+                    x:Name="Pausepbutton"
+                    Height=" 30"
+                    Content="暂停"                     
+                    Margin="258,0,259,0" />
+            <Button Width=" 100"
+                    x:Name="Resumebutton"
+                    Height=" 30"
+                    Content="恢复"                    
+                    Margin="258,0,259,0" />
+            <Button Width=" 100"
+                    x:Name="Stopbutton"
+                    Height=" 30"
+                    Content="停止"
+                    Margin="258,0,259,0" />
+
+            <!-- 触发器及故事板的组合 -->
+            <StackPanel.Triggers>
+                <!-- 很好翻译了：在按键startButton被点击的时候触发 -->
+                <EventTrigger SourceName="Beginbutton"
+                              RoutedEvent="Button.Click">
+                    <!-- 事件触发以后做什么呢？由故事板来解决，它来产生动画效果。 -->
+                    <BeginStoryboard x:Name="MyBeginStoryboard">
+                        <Storyboard x:Name="story"
+                                    Storyboard.TargetName="elips"
+                                    Storyboard.TargetProperty="Center">
+                            <PointAnimationUsingPath Duration="0:0:3"
+                                                     AutoReverse="True"
+                                                     RepeatBehavior="Forever">
+                                <PointAnimationUsingPath.PathGeometry>
+                                    <PathGeometry Figures="M 96 288 C 576 0,0 0,480 288" ></PathGeometry>
+                                </PointAnimationUsingPath.PathGeometry>
+                            </PointAnimationUsingPath>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <!-- 同理可证：pauseButton被点击的时候故事全部暂停 ：PauseStoryboard -->
+                <EventTrigger SourceName="Pausepbutton"
+                              RoutedEvent="Button.Click">
+                    <PauseStoryboard BeginStoryboardName="MyBeginStoryboard">
+                    </PauseStoryboard>
+                </EventTrigger>
+                <!-- 同理可证：pauseButton被点击的时候故事全部重新开始 ：ResumeStoryboard -->
+                <EventTrigger RoutedEvent="Button.Click"
+                              SourceName="Resumebutton">
+                    <ResumeStoryboard BeginStoryboardName="MyBeginStoryboard">
+                    </ResumeStoryboard>
+                </EventTrigger>
+                <!-- 同理可证：pauseButton被点击的时候故事全部重新完全停掉 ：StopStoryboard -->
+                <EventTrigger RoutedEvent="Button.Click"
+                              SourceName="Stopbutton">
+                    <StopStoryboard BeginStoryboardName="MyBeginStoryboard">
+                    </StopStoryboard>
+                </EventTrigger>
+            </StackPanel.Triggers>
+
+        </StackPanel>
+    </Grid>
+</Window>

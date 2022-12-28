@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gzr3cik+PpKzXv5zzDx7n2hB5JMPx05BpOUuymsC5LHldS4YN68bfrvmzDoYLAsOSQIh7dSYI2YQ+i2cntdK/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PuHaoRan\\Desktop\\WpfApp1\\WpfApp2\\WpfApp2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PuHaoRan\\.nuget\\packages\\ecocore\\7.0.0.14453\\ecocore.7.0.0.14453.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8”而不是项目目标框架“net5.0-windows7.0”还原包“EcoCore 7.0.0.14453”。此包可能与项目不完全兼容。",
+      "libraryId": "EcoCore",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}

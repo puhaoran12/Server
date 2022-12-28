@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1" xmlns:component1="clr-namespace:WpfApp1.Component"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <Grid>
+            <Canvas Background="White" Margin="0,48,0,0">
+                <Viewbox Name="mainView" Canvas.Left="10" Canvas.Top="10" Height="706" Width="1156">
+                    <Grid Height="485" Width="800">
+                        <component1:CoolingTower Width="90" Height="110" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                            Margin="10,0,0,365"
+                                            IsRunning="{Binding ElementName=btn,Path=Content}"
+                                            IsFault="{Binding ElementName=btn,Path=Content}" RenderTransformOrigin="-0.174,-0.053"/>
+
+                        <component1:Pipeline x:Name="PP" Height="10" Width="100" Direction="1" CapRadius="1" LiquidColor="Green" Margin="274,31,0,0"
+                                             HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="5">
+                            <component1:Pipeline.RenderTransform>
+                                <RotateTransform Angle="45"/>
+                            </component1:Pipeline.RenderTransform>
+                        </component1:Pipeline>
+
+                        <!--单向并可以设置暂停-->
+                        <component1:Pipeline2 Height="10" Width="100" CapRadius3="1" LiquidColor3="Green" Margin="153,95,0,0"
+                                             HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="0" IsRunning3="{Binding ElementName=btn,Path=Content}"
+                                             >
+                            <component1:Pipeline2.RenderTransform>
+                                <RotateTransform Angle="-45"/>
+                            </component1:Pipeline2.RenderTransform>
+                        </component1:Pipeline2>
+
+                        <component1:UserControl1 Height="30" Width="300" Direction4="1" LiquidColor4="green" Margin="33,154,467,301"></component1:UserControl1>
+
+                        <component1:UserControl2 Height="30" Width="300"  Margin="449,125,51,330"></component1:UserControl2>
+                    </Grid>
+                </Viewbox>
+            </Canvas>
+            <Button Name="btn" Content="true" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="74" Click="btn_Click"/>
+            <Button Name="ort"  Content="方向" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" Width="76" Click="ort_Click"/>
+        </Grid>
+    </Grid>
+</Window>

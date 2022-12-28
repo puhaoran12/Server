@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApp1.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1" 
+             xmlns:component1="clr-namespace:WpfApp1.Component"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+            <Canvas>
+                <Viewbox Name="mainView">
+                    <Grid>
+                        <component1:CoolingTower Width="90" Height="110" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                            Margin="125,0,0,95"
+                                            IsRunning="True"
+                                            IsFault="False"/>
+
+                        <component1:Pipeline Height="10" Width="100" Direction="1" CapRadius="1" LiquidColor="Green" Margin="311.284,137.461,0,0"
+                                             HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="5">
+                            <component1:Pipeline.RenderTransform>
+                                <RotateTransform Angle="45"/>
+                            </component1:Pipeline.RenderTransform>
+                        </component1:Pipeline>
+
+                        <!--单向并可以设置暂停-->
+                        <component1:Pipeline2 Height="10" Width="100" CapRadius3="1" LiquidColor3="Green" Margin="311.284,137.461,0,0"
+                                             HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="5" IsRunning3="True"
+                                             >
+                            <component1:Pipeline2.RenderTransform>
+                                <RotateTransform Angle="-45"/>
+                            </component1:Pipeline2.RenderTransform>
+                        </component1:Pipeline2>
+                    </Grid>
+                </Viewbox>
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>
