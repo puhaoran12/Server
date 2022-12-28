@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PuHaoRan\\Desktop\\WpfApp1\\WpfApp2\\WpfApp2.csproj",
+      "projectUniqueName": "C:\\Users\\PuHaoRan\\Desktop\\get_Server\\WpfApp2\\WpfApp2.csproj",
       "projectName": "WpfApp2",
-      "projectPath": "C:\\Users\\PuHaoRan\\Desktop\\WpfApp1\\WpfApp2\\WpfApp2.csproj",
+      "projectPath": "C:\\Users\\PuHaoRan\\Desktop\\get_Server\\WpfApp2\\WpfApp2.csproj",
       "packagesPath": "C:\\Users\\PuHaoRan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PuHaoRan\\Desktop\\WpfApp1\\WpfApp2\\obj\\",
+      "outputPath": "C:\\Users\\PuHaoRan\\Desktop\\get_Server\\WpfApp2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio2019共享组件、工具和SDK\\NuGetPackages",
